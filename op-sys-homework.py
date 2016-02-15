@@ -1,4 +1,6 @@
+#!/usr/bin/env python
 # Dylan Walseth (walsethd)
+# Written in Python 2.7.10
 
 import sys
 import mmap
@@ -21,6 +23,8 @@ def main():
                     line_number += 1
                 global number_diffs
                 print("There " + ("was 1 difference" if number_diffs == 1 else ("were " + str(number_diffs) + " differences")))
+                f2.close()
+            f1.close()
 
 """
 Checks to see if arugments provided are valid files
